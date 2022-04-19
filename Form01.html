@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Form Example 1</title>
+      <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+
+  <!-- forms started with the idea of sending enclosed data back up to a webiste -->
+  <!-- <form name = "mainFrom" action="http:// mywebsite/action_page"></form> -->
+  <!-- which we may well do in other projects later, but for now, we want to got to a js function -->
+
+<!-- return set to false to prevent default form submission to a URL -->
+<form name = "mainFrom" onsubmit="return false">
+
+  <fieldset id="userType">
+    <legend>Welcome</legend>
+    <button id="newUser" onclick="clickNewUser()">Click for New User</button><br  /><br />
+    <button id="existingUser" onclick="clickExistingUser()">Click for Existing User</button>
+    </fieldset>
+
+	<fieldset id="new-user">
+
+    <legend>New User</legend>
+
+   <label for="nusername"> User Name:</label> 
+    <input type="text" name="nusername" id="nusername" />
+    
+    <label for="npassword">Password:</label>
+    <input type="text" name="npassword" id="npassword" />
+    
+     <label for="city">City:</label>
+    <input type="text" name="city" id="city" />
+      <br>
+		<label for="state">State (abbr.):</label>
+    <input type="text" name="state" id="state" />
+    
+    <br />
+    <button id="nlogin" onclick="newUserLogin()">Login</button>
+    
+    </fieldset>
+    
+	<fieldset id="existing-user">
+    <legend>New User</legend>
+
+   <label for="eusername"> User Name:</label> 
+    <input type="text" name="eusername" id="eusername" />
+    
+    <label for="epassword">Password:</label>
+    <input type="text" name="epassword" id="epassword" />
+    <br />
+    <button id="elogin" onclick="existingUserLogin()">Login</button>
+    </fieldset>
+
+</form>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
